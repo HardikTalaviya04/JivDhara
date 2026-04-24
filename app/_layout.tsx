@@ -1,14 +1,12 @@
-import React, { useEffect } from 'react';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
 import { Stack } from 'expo-router';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { useChatStore } from './store/chatStore';
 import * as SplashScreen from 'expo-splash-screen';
+import { useEffect } from 'react';
+import { useChatStore } from '../store/chatStore';
 
 SplashScreen.preventAutoHideAsync();
 
-export default function App() {
+export default function RootLayout() {
   const { loadMessagesFromStorage } = useChatStore();
 
   useEffect(() => {
@@ -16,7 +14,7 @@ export default function App() {
       try {
         await loadMessagesFromStorage();
       } catch (error) {
-        console.error('Error initializing app:', error);
+        console.error('Error initializing:', error);
       } finally {
         await SplashScreen.hideAsync();
       }
@@ -27,13 +25,15 @@ export default function App() {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <StatusBar barStyle="dark-content" backgroundColor="#FFFFFF" />
       <Stack
         screenOptions={{
           headerShown: false,
           animationEnabled: true,
         }}
-      />
+      >
+        <Stack.Screen name="onboarding" />
+        <Stack.Screen name="(tabs)" />
+      </Stack>
     </GestureHandlerRootView>
   );
 }
