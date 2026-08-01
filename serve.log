@@ -1,0 +1,13 @@
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +85
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 85, reused 42, downloaded 43, added 85, done
+ INFO  Accepting connections at http://localhost:3000
+ HTTP  8/1/2026 5:23:09 PM ::1 GET /
+ HTTP  8/1/2026 5:23:09 PM ::1 Returned 200 in 265 ms
+ HTTP  8/1/2026 5:23:10 PM ::1 GET /_expo/static/js/web/index-9df36d753b61f1ad3b5ca6840fcb8340.js
+ HTTP  8/1/2026 5:23:10 PM ::1 Returned 200 in 8 ms
+ HTTP  8/1/2026 5:23:10 PM ::1 GET /assets/node_modules/.pnpm/@expo+vector-icons@15.1.1_expo-font@14.0.12_expo@54.0.36_@babel+core@7.29.7_react-nativ_98562541a0a0f02b2d2ff661a967c174/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome5_Solid.605ed7926cf39a2ad5ec2d1f9d391d3d.ttf
+ HTTP  8/1/2026 5:23:10 PM ::1 Returned 200 in 4 ms
+ HTTP  8/1/2026 5:23:10 PM ::1 GET /assets/node_modules/.pnpm/@expo+vector-icons@15.1.1_expo-font@14.0.12_expo@54.0.36_@babel+core@7.29.7_react-nativ_98562541a0a0f02b2d2ff661a967c174/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome5_Regular.1f77739ca9ff2188b539c36f30ffa2be.ttf
+ HTTP  8/1/2026 5:23:10 PM ::1 Returned 200 in 2 ms
