@@ -127,6 +127,10 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
   container: {
     flex: 1,
     backgroundColor: '#111827', // Dark blue/gray background
@@ -301,5 +305,9 @@ const styles = StyleSheet.create({
     borderRadius: 24,
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 16,
+  },
+  text: {
+    textAlign: 'center',
   },
 });
