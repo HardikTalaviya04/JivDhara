@@ -6,6 +6,35 @@ export interface Verse {
   meaning: string;
 }
 
+export interface Chapter {
+  id: number;
+  title: string;
+  sanskritTitle: string;
+  description: string;
+  verseCount: number;
+}
+
+export const chapters: Chapter[] = [
+  { id: 1, title: "Arjuna Visada Yoga", sanskritTitle: "अर्जुनविषादयोग", description: "The Yoga of Arjuna's Dejection", verseCount: 47 },
+  { id: 2, title: "Sankhya Yoga", sanskritTitle: "साङ्ख्ययोग", description: "The Yoga of Knowledge", verseCount: 72 },
+  { id: 3, title: "Karma Yoga", sanskritTitle: "कर्मयोग", description: "The Yoga of Action", verseCount: 43 },
+  { id: 4, title: "Jnana Karma Sanyasa Yoga", sanskritTitle: "ज्ञानकर्मसंन्यासयोग", description: "The Yoga of Knowledge and the Disciplines of Action", verseCount: 42 },
+  { id: 5, title: "Karma Sanyasa Yoga", sanskritTitle: "कर्मसंन्यासयोग", description: "The Yoga of Action and Knowledge", verseCount: 29 },
+  { id: 6, title: "Dhyana Yoga", sanskritTitle: "ध्यानयोग", description: "The Yoga of Self-Control", verseCount: 47 },
+  { id: 7, title: "Jnana Vijnana Yoga", sanskritTitle: "ज्ञानविज्ञानयोग", description: "The Yoga of Knowledge and Judgment", verseCount: 30 },
+  { id: 8, title: "Aksara Brahma Yoga", sanskritTitle: "अक्षरब्रह्मयोग", description: "The Yoga of the Imperishable Brahman", verseCount: 28 },
+  { id: 9, title: "Raja Vidya Raja Guhya Yoga", sanskritTitle: "राजविद्याराजगुह्ययोग", description: "The Yoga of the Sovereign Science and Sovereign Secret", verseCount: 34 },
+  { id: 10, title: "Vibhuti Yoga", sanskritTitle: "विभूतियोग", description: "The Yoga of the Divine Manifestations", verseCount: 42 },
+  { id: 11, title: "Visvarupa Darsana Yoga", sanskritTitle: "विश्वरूपदर्शनयोग", description: "The Yoga of the Vision of the Cosmic Form", verseCount: 55 },
+  { id: 12, title: "Bhakti Yoga", sanskritTitle: "भक्तियोग", description: "The Yoga of Devotion", verseCount: 20 },
+  { id: 13, title: "Ksetra Ksetrajna Vibhaga Yoga", sanskritTitle: "क्षेत्रक्षेत्रज्ञविभागयोग", description: "The Yoga of the Field and its Knower", verseCount: 34 },
+  { id: 14, title: "Gunatraya Vibhaga Yoga", sanskritTitle: "गुणत्रयविभागयोग", description: "The Yoga of the Division of the Three Gunas", verseCount: 27 },
+  { id: 15, title: "Purusottama Yoga", sanskritTitle: "पुरुषोत्तमयोग", description: "The Yoga of the Supreme Person", verseCount: 20 },
+  { id: 16, title: "Daivasura Sampad Vibhaga Yoga", sanskritTitle: "दैवासुरसम्पद्विभागयोग", description: "The Yoga of the Division between the Divine and the Demoniacal", verseCount: 24 },
+  { id: 17, title: "Sraddhatraya Vibhaga Yoga", sanskritTitle: "श्रद्धात्रयविभागयोग", description: "The Yoga of the Threefold Faith", verseCount: 28 },
+  { id: 18, title: "Moksa Sanyasa Yoga", sanskritTitle: "मोक्षसंन्यासयोग", description: "The Yoga of Liberation by Renunciation", verseCount: 78 }
+];
+
 export const verses: Verse[] = [
   {
     chapter: 2,
@@ -29,6 +58,10 @@ export const verses: Verse[] = [
     meaning: "Joy and sorrow are temporary and inevitable. Learn to endure them with a calm and balanced mind."
   }
 ];
+
+export const getVersesByChapter = (chapterId: number): Verse[] => {
+  return verses.filter(v => v.chapter === chapterId);
+};
 
 export const getRandomVerse = (): Verse => {
   const randomIndex = Math.floor(Math.random() * verses.length);
